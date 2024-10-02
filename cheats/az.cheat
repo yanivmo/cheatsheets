@@ -1,5 +1,8 @@
 % az, azure
 
+# Login and acquire authentication token
+as login
+
 # Start VM
 az vm start --resource-group "<az_resource_group_name>" --name "<az_vm_name>"
 
