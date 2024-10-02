@@ -30,6 +30,9 @@ git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(b
 # Log tree top, no pager
 git --no-pager log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset" -22
 
+# Show the user name and email that will be used in commits created in the current directory
+git config --get user.name; git config --get user.email
+
 # Configure personal details (use "local" for configuration to be restricted to the current repository)
 git config --<config_scope> user.name "<full_name>"; \
 git config --<config_scope> user.email "<email>"
