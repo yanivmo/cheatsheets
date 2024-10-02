@@ -1,5 +1,8 @@
 % git
 
+# Clone non-default branch
+git clone --branch <branch_to_clone> <repository>
+
 # Stage all modified files; don't stage new files
 git add --update
 
