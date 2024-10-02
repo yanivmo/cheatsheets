@@ -1,0 +1,53 @@
+% git
+
+# Stage all modified files; don't stage new files
+git add --update
+
+# Stage all modified and new files
+git add --all
+
+# Commit staged files with message
+git commit --message="<commit_message>"
+
+# Commit staged files with message skipping verification hooks
+git commit --no-verify --message="<commit_message>"
+
+# Switch the active branch
+git checkout <branch>
+
+# Push the active branch to remote, create tracking remote branch if needed
+git push --set-upstream <git_remote> <active_branch>
+
+# Fails if the first branch is not an ancestor of the second branch
+git merge-base --is-ancestor <branch> <branch>
+
+# List branches that contain the specified branch
+git branch <local_branches_or_remote> --contains <branch>
+
+# Log tree
+git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset"
+
+# Log tree top, no pager
+git --no-pager log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset" -22
+
+# Configure personal details (use "local" for configuration to be restricted to the current repository)
+git config --<config_scope> user.name "<full_name>"; \
+git config --<config_scope> user.email "<email>"
+
+;----------------------------------------------------------------
+; Straight forward variables
+
+$ repo_root: git rev-parse --show-toplevel
+$ active_branch: git rev-parse --abbrev-ref HEAD
+$ branch: git branch | awk '{print $NF}' | sort --- --header "Choose branch or enter commit ref"
+$ git_remote: git remote
+
+;----------------------------------------------------------------
+; Complex variables
+
+; Choices:  "Local branches"  "Remote branches"
+; Values:        "--remotes"        empty
+$ local_branches_or_remote: echo "Local branches"; echo "Remote branches" --- --map 'grep -q Remote && echo "--remotes"' --header "Search local branches or remote?"
+
+; Values:  "local"  "global"
+$ config_scope: echo "local"; echo "global" --- --header "Choose the configuration scope"

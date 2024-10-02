@@ -1,0 +1,16 @@
+% docker
+
+# List running containers (narrow and sorted)
+docker ps --format "table {{.Names}}\\t{{.ID}}\\t{{.State}}\\t{{.Status}}" | tail -n +2 | sort
+
+# List all containers including stopped
+docker ps --all
+
+# Remove all dangling images
+docker image prune --force
+
+# Remove all stopped containers
+docker container prune --force
+
+# Remove all stopped containers, unused networks, unused anonymous volumes, and dangling images
+docker system prune --volumes

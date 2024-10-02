@@ -1,0 +1,16 @@
+% az, azure
+
+# Start VM
+az vm start --resource-group "<az_resource_group_name>" --name "<az_vm_name>"
+
+# Connect to a VM using SSH (through Bastion)
+az network bastion ssh \
+    --ids "<az_resource_group_id>/providers/Microsoft.Network/bastionHosts/<az_bastion_host_name>" \
+    --target-resource-id  "<az_resource_group_id>/providers/Microsoft.Compute/virtualMachines/<az_vm_name>"\
+    --auth-type "password" \
+    --username "<username>"
+
+$ az_resource_group_name: az group list | jq --raw-output '.[] | .name'
+$ az_resource_group_id: az group list | jq --raw-output '.[] | .id'
+$ az_bastion_host_name: az network bastion list  | jq --raw-output '.[] | .name'
+$ az_vm_name: az vm list --resource-group '<az_resource_group_name>' | jq --raw-output '.[] | .name'
