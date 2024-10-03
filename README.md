@@ -1,7 +1,7 @@
 # Cheatsheets
 
 Shell command cheatsheets for usage in [navi] – interactive cheatsheet tool.
-Work both on Mac and on Linux.
+Works both on Mac and on Linux.
 
 ## Installation
 

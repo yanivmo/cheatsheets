@@ -1,0 +1,7 @@
+;----------------------------------------------------------------
+; Shell commands that should work in any shell
+
+% shell
+
+# Add current directory to PATH for this shell session only
+export PATH="$(pwd):${PATH}"
