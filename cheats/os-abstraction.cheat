@@ -1,0 +1,9 @@
+;----------------------------------------------------------------
+; Generalize commands that differ between Mac and Linux
+
+% os-abstraction
+
+# Print OS name
+echo <os_name>
+
+$ os_name: [ "$(uname)" = "Darwin" ] && echo macos || echo linux

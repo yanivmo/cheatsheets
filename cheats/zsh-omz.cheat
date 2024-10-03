@@ -1,0 +1,5 @@
+;----------------------------------------------------------------
+; Commands for Zsh + Oh my Zsh!
+
+# Reload Zsh configuration; for example, useful if .zshrc changes
+omz reload
