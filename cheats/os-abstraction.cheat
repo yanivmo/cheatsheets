@@ -7,3 +7,6 @@
 echo <os_name>
 
 $ os_name: [ "$(uname)" = "Darwin" ] && echo macos || echo linux
+$ default_clipboard_copy_macos: echo "pbcopy"
+$ default_clipboard_copy_linux: echo "xclip -selection clipboard"
+$ CLIPBOARD_COPY: [ "<os_name>" = macos ] && echo "<default_clipboard_copy_macos>" || echo "<default_clipboard_copy_linux>"
