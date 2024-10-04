@@ -18,6 +18,12 @@ git commit --no-verify --message="<commit_message>"
 # Switch the active branch
 git checkout <branch>
 
+# Create annotated tag at HEAD
+git tag -a <tag>
+
+# Push tags
+git push origin --tags
+
 # Push the active branch to remote, create tracking remote branch if needed
 git push --set-upstream <git_remote> <active_branch>
 
