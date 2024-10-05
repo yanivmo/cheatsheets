@@ -3,6 +3,8 @@
 Shell command cheatsheets for usage in [navi] – interactive cheatsheet tool.
 Works both on Mac and on Linux.
 
+Check `cheats` directory for the available categories.
+
 ## Installation
 
 1. Install [navi].

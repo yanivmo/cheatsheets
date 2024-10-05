@@ -1,0 +1,10 @@
+% cheats, navi
+
+# List registered navi cheats
+ls -l "<cheats_path>"
+
+# Delete registered navi cheats
+rm -r "<cheats_path>/<cheats_collection>"
+
+$ cheats_path: navi info cheats-path
+$ cheats_collection: ls -1 "<cheats_path>"
