@@ -6,5 +6,8 @@ ls -l "<cheats_path>"
 # Delete registered navi cheats
 rm -r "<cheats_path>/<cheats_collection>"
 
+# Go to navi cheatsheets directory
+cd "<cheats_path>"
+
 $ cheats_path: navi info cheats-path
 $ cheats_collection: ls -1 "<cheats_path>"
