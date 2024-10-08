@@ -18,6 +18,21 @@ git commit --no-verify --message="<commit_message>"
 # Switch the active branch
 git checkout <branch>
 
+# Stash all modified files
+git stash push --message '<message>'
+
+# List all stashes
+git stash list
+
+# Apply saved stash without deleting it
+git stash apply <stash>
+
+# Delete saved stash
+git stash drop <stash>
+
+#  Unstage all files; i.e. reset the index but don't delete anything
+git reset
+
 # Create annotated tag at HEAD
 git tag -a <tag>
 
