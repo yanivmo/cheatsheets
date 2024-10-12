@@ -57,6 +57,15 @@ git --no-pager log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgree
 # Show the user name and email that will be used in commits created in the current directory
 git config --get user.name; git config --get user.email
 
+# Show which branch tracks what
+git remote show <git_remote>
+
+# Add new remote
+git remote add <new_remote_name> <remote_url>
+
+# Change remote URL
+git remote set-url <git_remote> <new_remote_url>
+
 # Prune branches that were merged into main or deleted from remote
 git fetch --prune && git for-each-ref --format '%(refname:short)%09%(upstream:track)' refs/heads \
   | grep '\\[gone\\]' \
