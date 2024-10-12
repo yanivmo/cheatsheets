@@ -39,6 +39,9 @@ git tag -a <tag>
 # Push tags
 git push origin --tags
 
+# Fetch tags
+git fetch --tags
+
 # Push the active branch to remote, create tracking remote branch if needed
 git push --set-upstream <git_remote> <active_branch>
 
