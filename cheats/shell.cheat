@@ -6,6 +6,9 @@
 # Add current directory to PATH for this shell session only
 export PATH="$(pwd):${PATH}"
 
+# Find files in the current directory and its subdirectories
+find . -type f -name "<filename_or_glob>"
+
 ;----------------------------------------------------------------
 ; This section contains code snippets, intended for usage inside
 ; shell scripts. Executing these commands will add the chosen
