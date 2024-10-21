@@ -1,0 +1,13 @@
+% pyenv, python
+
+# Install new python version
+pyenv install '<py3_version>'
+
+# Show all the installed Python versions
+pyenv versions
+
+; All the available to pyenv python 3.x versions
+$ py3_major_version: pyenv install --list | egrep --only-matching '^\s*3\.\d+' | tr -d '[:blank:]' | sort --version-sort | uniq --- --header "Choose major Python version"
+
+; All the available to pyenv python 3.x.y versions
+$ py3_version: pyenv install --list | fgrep '<py3_major_version>' | tr -d '[:blank:]' | sort --version-sort | uniq --- --header "Choose specific Python release"
