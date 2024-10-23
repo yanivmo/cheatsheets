@@ -1,13 +1,25 @@
 % pyenv, python
 
+# Set global Python version
+pyenv global '<installed_py_version>'
+
+# Set Python version local for the current directory
+pyenv local '<installed_py_version>'
+
 # Install new python version
 pyenv install '<py3_version>'
 
-# Show all the installed Python versions
+# Show all installed Python versions
 pyenv versions
+
+# Uninstall Python version
+pyenv uninstall '<installed_py_version>'
 
 ; All the available to pyenv python 3.x versions
 $ py3_major_version: pyenv install --list | egrep --only-matching '^\s*3\.\d+' | tr -d '[:blank:]' | sort --version-sort | uniq --- --header "Choose major Python version"
 
 ; All the available to pyenv python 3.x.y versions
 $ py3_version: pyenv install --list | fgrep '<py3_major_version>' | tr -d '[:blank:]' | sort --version-sort | uniq --- --header "Choose specific Python release"
+
+; Installed python versions
+$ installed_py_version: pyenv versions --bare
