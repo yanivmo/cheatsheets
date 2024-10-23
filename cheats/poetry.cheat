@@ -1,0 +1,22 @@
+% poetry, python
+
+# Install all dependencies
+poetry install
+
+# Show path to the active virtualenv
+poetry env info --path
+
+# List the virtualenvs for the current project
+poetry env list
+
+# Delete all virtualenvs for the current project
+poetry env remove --all
+
+# Create new Poetry project
+poetry new <project_name>
+
+# Install poetry globally
+pipx install poetry
+
+# Configure Poetry to respect pyenv's Python version
+poetry config virtualenvs.prefer-active-python true
