@@ -30,6 +30,9 @@ git stash apply <stash>
 # Delete saved stash
 git stash drop <stash>
 
+# Merge remote branch but leave the code modified without creating a commit
+git merge --no-commit --no-ff <remote_branch>
+
 #  Unstage all files; i.e. reset the index but don't delete anything
 git reset
 
@@ -88,6 +91,7 @@ git config --global init.defaultBranch "main"
 $ repo_root: git rev-parse --show-toplevel
 $ active_branch: git rev-parse --abbrev-ref HEAD
 $ branch: git branch | awk '{print $NF}' | sort --- --header "Choose branch or enter commit ref"
+$ remote_branch: git branch --remote | awk '{print $NF}' | sort --- --header "Choose remote branch or enter commit ref"
 $ git_remote: git remote
 
 ;----------------------------------------------------------------
