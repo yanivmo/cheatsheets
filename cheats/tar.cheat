@@ -1,0 +1,4 @@
+% tar
+
+# Create gzip compressed tar archive
+tar --create --gzip --file <archive_name>.tar.gz <files_to_archive>
