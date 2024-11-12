@@ -6,6 +6,12 @@ docker ps --format "table {{.Names}}\\t{{.ID}}\\t{{.State}}\\t{{.Status}}" | tai
 # List all containers including stopped
 docker ps --all
 
+# Remove Docker image
+docker image rm <image_id>
+
+# Remove all images with the specified name and any tag
+docker image rm $(docker images --quiet --filter=reference="<image_name>:*")
+
 # Remove all dangling images
 docker image prune --force
 
@@ -14,3 +20,11 @@ docker container prune --force
 
 # Remove all stopped containers, unused networks, unused anonymous volumes, and dangling images
 docker system prune --volumes
+
+# Show all the layers of an image
+docker history --human <image_id>
+
+# Show Docker disk consumption
+docker system df
+
+$ image_id: docker images --- --headers 1 --column 3
