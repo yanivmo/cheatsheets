@@ -3,6 +3,9 @@
 
 % shell
 
+# List filenames in a single column
+ls -1 "<filename_or_glob>"
+
 # Add current directory to PATH for this shell session only
 export PATH="$(pwd):${PATH}"
 
