@@ -6,6 +6,9 @@ apt list --installed
 # List upgradable packages
 apt list --upgradable
 
+# Upgrade all packages
+sudo apt upgrade
+
 # Upgrade one package
 sudo apt-get install --only-upgrade <upgradable_package>
 
