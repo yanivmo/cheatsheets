@@ -2,3 +2,11 @@
 
 # List all installed packages
 apt list --installed
+
+# List upgradable packages
+apt list --upgradable
+
+# Upgrade one package
+sudo apt-get install --only-upgrade <upgradable_package>
+
+$ upgradable_package: apt list --upgradable | egrep --only-matching '^.+/' | sed 's/.$//'
