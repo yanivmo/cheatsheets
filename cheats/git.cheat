@@ -21,6 +21,9 @@ git checkout <branch>
 # Stash all modified files
 git stash push --message '<message>'
 
+# Stash all unstaged changes
+git stash push --keep-index --message '<message>'
+
 # List all stashes
 git stash list
 
