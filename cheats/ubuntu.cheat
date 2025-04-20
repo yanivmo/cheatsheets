@@ -12,4 +12,16 @@ sudo apt upgrade
 # Upgrade one package
 sudo apt-get install --only-upgrade <upgradable_package>
 
+# List all local users
+cut -d: -f1 /etc/passwd
+
+# Add a normal user
+sudo adduser <username>
+
+# Add a user to the sudoers
+sudo adduser <username> sudo
+
+# Change active user's password
+passwd
+
 $ upgradable_package: apt list --upgradable | egrep --only-matching '^.+/' | sed 's/.$//'
