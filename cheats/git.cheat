@@ -57,6 +57,9 @@ git merge-base --is-ancestor <branch> <branch>
 # List branches that contain the specified branch
 git branch <local_branches_or_remote> --contains <branch>
 
+# Print the name of the current active branch
+git branch --show-current
+
 # Log tree
 git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset"
 
